@@ -9,6 +9,11 @@
 scanf("%d", &a[i][j]);
 scanf("%d", *(a + i) + j);
 
+二维数组作为参数传递，请注意定义形参的方式
+int  (*a)[4]
+int  (*b)[3]
+
+
 */
 
 #include <iostream>
