@@ -1,0 +1,47 @@
+/*
+数学趣题
+
+猴子吃桃
+
+有一只猴子第1天摘下若干桃子，当即吃掉了一般，又多吃了一个；
+第2天又将剩下的桃子吃掉一半，又多吃一个；
+按照这样的吃法每天都吃前一天剩下的桃子的一半又一个。到了第10天，就只剩一个桃子。
+
+问题：这只猴子第一天摘了多少个桃子。
+
+*/
+
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <vector>
+using namespace std;
+
+
+
+int main()
+{
+	int sum = 1;//sum初始值为1，表示第10天的桃子数
+	for (int i = 9; i >= 1; i--)
+	{
+		sum = (sum + 1) * 2;//每次循环都得出第i天的桃子数
+	}
+	printf("The number of peach are:%d \r\n", sum);
+
+
+
+
+	cout << endl;
+	cout << "Hello World C Algorithm." << endl;
+	system("pause");
+	return 0;
+}
+
+/*
+
+1534
+
+
+*/
