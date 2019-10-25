@@ -25,7 +25,7 @@ int main()
 
 	end = clock();//标记时间戳
 
-	printf("The time was: end:%d,,start:%d,,CLK_TCK:%d, ,,,%0.3f \r\n",end,start,CLK_TCK, ((end - start) / CLK_TCK));
+	printf("The time was: end:%d,,start:%d,,CLK_TCK:%d, ,,,%0.3f \r\n",end,start,CLK_TCK, ((float)(end - start) / CLK_TCK));
 
 	float ft = (end - start) / CLK_TCK;
 	cout << "time was:" << ft << endl;
