@@ -40,6 +40,23 @@ int qiuMi(int m, int n)
 }
 
 
+unsigned long myPow(int m, int n)
+{
+	unsigned long temp;
+	if (n == 0) return 1;
+	if (n == 1) return m;
+
+	if (n % 2 == 0)
+	{
+		temp = myPow(m, n / 2);    //在n特别大的时候，这种方法能更加高效
+		return temp * temp;
+	}
+
+	if (n % 2 != 0)
+	{
+		return m*myPow(m, n - 1);
+	}
+}
 
 
 int main()
@@ -47,7 +64,9 @@ int main()
 	int m, n;
 	printf("Please input m and n \r\n");
 	scanf("%d %d", &m, &n);
-	printf("%d^%d=%d", m, n, qiuMi(m, n));
+
+	printf("%d^%d=%d \r\n", m, n, myPow(m, n));
+	printf("%d^%d=%d \r\n", m, n, qiuMi(m, n));
 
 
 	cout << endl;
