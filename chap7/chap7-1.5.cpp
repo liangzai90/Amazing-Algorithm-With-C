@@ -46,7 +46,7 @@ void Push(sqStack* s, ElemType e)
 	//栈满，追加空间
 	if (s->top - s->base >= s->stacksize)
 	{
-		s->base = (ElemType*)realloc(s->base, (s->stacksize + STACKINCREATEMENT*sizeof(ElemType)));
+		s->base = (ElemType*)realloc(s->base, (s->stacksize + STACKINCREATEMENT)*sizeof(ElemType));
 		if (!s->base)  exit(0); //存储空间分配失败
 		s->top = s->base + s->stacksize;//
 		s->stacksize = s->stacksize + STACKINCREATEMENT;//设置栈的最大容量
